@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6 col-md-3 md-offset-9">
+            <div class="my-2">
+                <select [(ngModel)]="category" class="" (change)="selectedCategory()">
+                    <option value="undefined" disabled selected>Selected category</option>
+                    <option [value]="category.key" *ngFor="let category of categories$| async">{{category.title}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="my-2">
+                <h6>Filter Posts</h6>
+            </div>
+            <div>
+                <table class="table text-center">
+                    <thead>
+                        <th>S.No</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>postCat Id</th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let post of filtercategory$ | async; let i=index">
+                            <td>{{i+1}}</td>
+                            <td>{{post.title}}</td>
+                            <td>{{post.description}}</td>
+                            <td>{{post.category}}</td>
+                            <td>{{post.categoryId}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

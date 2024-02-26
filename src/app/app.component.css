@@ -1,0 +1,12 @@
+.navbar-toggler{
+    border: none;
+    /* box-shadow: none; */
+}
+.navbar-toggler:focus{
+    border: none;
+    box-shadow: none;
+}
+button span.navbar-toggler-icon{
+    color: #d63434;
+}
+

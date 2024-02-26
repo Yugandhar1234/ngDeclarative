@@ -1,0 +1,11 @@
+<div class="d-flex justify-content-center">
+    <div>
+        <div class="my-2">Post Deatils </div>
+    <div *ngIf="post$ | async as post">
+        <div>{{post.title}}</div>
+        <div>{{post.description}}</div>
+        <div>{{post.category}}</div>
+        <div>{{post.categoryId}}</div>
+    </div>
+    </div>
+</div>
